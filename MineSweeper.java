@@ -24,19 +24,19 @@ public class MineSweeper extends JPanel implements ActionListener, MouseListener
 	int timePassed, numMinesLeft;
 
 	int iconSet= 0;
-	ImageIcon[][] icons= new ImageIcon[][]{new ImageIcon[]	{new ImageIcon("msEmpty.png"),new ImageIcon("ms1.png"),new ImageIcon("ms2.png"),new ImageIcon("ms3.png"),new ImageIcon("ms4.png"),
-															new ImageIcon("ms5.png"),new ImageIcon("ms6.png"),new ImageIcon("ms7.png"),new ImageIcon("ms8.png"),
-															new ImageIcon("mine.jpg"),new ImageIcon("flag.png")},
-											new ImageIcon[]{new ImageIcon("num0.png"),new ImageIcon("num1.png"),new ImageIcon("num2.png"),new ImageIcon("num3.png"),new ImageIcon("num4.png"),
-															new ImageIcon("num5.png"),new ImageIcon("num6.png"),new ImageIcon("num7.png"),new ImageIcon("num8.png"),
-															new ImageIcon("mine2.png"),new ImageIcon("flag2.png")},
-											new ImageIcon[]{new ImageIcon("box0.png"),new ImageIcon("box1.png"),new ImageIcon("box2.png"),new ImageIcon("box3.png"),new ImageIcon("box4.png"),
-															new ImageIcon("box5.png"),new ImageIcon("box6.png"),new ImageIcon("box7.png"),new ImageIcon("box8.png"),
-															new ImageIcon("mine3.png"),new ImageIcon("flag3.png")}};
+	ImageIcon[][] icons= new ImageIcon[][]{new ImageIcon[]	{new ImageIcon("images/msEmpty.png"),new ImageIcon("images/ms1.png"),new ImageIcon("images/ms2.png"),new ImageIcon("images/ms3.png"),new ImageIcon("images/ms4.png"),
+															new ImageIcon("images/ms5.png"),new ImageIcon("images/ms6.png"),new ImageIcon("images/ms7.png"),new ImageIcon("images/ms8.png"),
+															new ImageIcon("images/mine.jpg"),new ImageIcon("images/flag.png")},
+											new ImageIcon[]{new ImageIcon("images/num0.png"),new ImageIcon("images/num1.png"),new ImageIcon("images/num2.png"),new ImageIcon("images/num3.png"),new ImageIcon("images/num4.png"),
+															new ImageIcon("images/num5.png"),new ImageIcon("images/num6.png"),new ImageIcon("images/num7.png"),new ImageIcon("images/num8.png"),
+															new ImageIcon("images/mine2.png"),new ImageIcon("images/flag2.png")},
+											new ImageIcon[]{new ImageIcon("images/box0.png"),new ImageIcon("images/box1.png"),new ImageIcon("images/box2.png"),new ImageIcon("images/box3.png"),new ImageIcon("images/box4.png"),
+															new ImageIcon("images/box5.png"),new ImageIcon("images/box6.png"),new ImageIcon("images/box7.png"),new ImageIcon("images/box8.png"),
+															new ImageIcon("images/mine3.png"),new ImageIcon("images/flag3.png")}};
 
-	ImageIcon[][] resetIcons= new ImageIcon[][] {new ImageIcon[] {new ImageIcon("default.png"),new ImageIcon("click.png"),new ImageIcon("lose.png"),new ImageIcon("win.png")},
-												new ImageIcon[] {new ImageIcon("default2.png"),new ImageIcon("click2.png"),new ImageIcon("lose2.png"),new ImageIcon("win2.png")},
-												new ImageIcon[] {new ImageIcon("default3.png"),new ImageIcon("click3.png"),new ImageIcon("lose3.png"),new ImageIcon("win3.png")}};
+	ImageIcon[][] resetIcons= new ImageIcon[][] {new ImageIcon[] {new ImageIcon("images/default.png"),new ImageIcon("images/click.png"),new ImageIcon("images/lose.png"),new ImageIcon("images/win.png")},
+												new ImageIcon[] {new ImageIcon("images/default2.png"),new ImageIcon("images/click2.png"),new ImageIcon("images/lose2.png"),new ImageIcon("images/win2.png")},
+												new ImageIcon[] {new ImageIcon("images/default3.png"),new ImageIcon("images/click3.png"),new ImageIcon("images/lose3.png"),new ImageIcon("images/win3.png")}};
 
 
 	int[] dimArr= new int[] {8,16,16,8,16,30};
@@ -57,7 +57,7 @@ public class MineSweeper extends JPanel implements ActionListener, MouseListener
 
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-			frame.setIconImage(ImageIO.read(new File("mine.jpg")));
+			frame.setIconImage(ImageIO.read(new File("images/mine.jpg")));
 		}
 		catch (Exception e) {
 			System.out.println(e.getStackTrace());
@@ -215,10 +215,6 @@ public class MineSweeper extends JPanel implements ActionListener, MouseListener
 				}
 			}
 		}
-		/*System.out.println("Selected");
-		printGrid(checkSelected);
-		System.out.println("Flagged");
-		printGrid(checkFlagged);*/
 	}
 
 	public void mouseClicked(MouseEvent e) {
@@ -236,15 +232,15 @@ public class MineSweeper extends JPanel implements ActionListener, MouseListener
 	}
 
 	public void defaultIconSize() {
-		icons= new ImageIcon[][]{new ImageIcon[]{new ImageIcon("msEmpty.png"),new ImageIcon("ms1.png"),new ImageIcon("ms2.png"),new ImageIcon("ms3.png"),new ImageIcon("ms4.png"),
-												new ImageIcon("ms5.png"),new ImageIcon("ms6.png"),new ImageIcon("ms7.png"),new ImageIcon("ms8.png"),
-												new ImageIcon("mine.jpg"),new ImageIcon("flag.png")},
-											new ImageIcon[]{new ImageIcon("num0.png"),new ImageIcon("num1.png"),new ImageIcon("num2.png"),new ImageIcon("num3.png"),new ImageIcon("num4.png"),
-												new ImageIcon("num5.png"),new ImageIcon("num6.png"),new ImageIcon("num7.png"),new ImageIcon("num8.png"),
-												new ImageIcon("mine2.png"),new ImageIcon("flag2.png")},
-											new ImageIcon[]{new ImageIcon("box0.png"),new ImageIcon("box1.png"),new ImageIcon("box2.png"),new ImageIcon("box3.png"),new ImageIcon("box4.png"),
-												new ImageIcon("box5.png"),new ImageIcon("box6.png"),new ImageIcon("box7.png"),new ImageIcon("box8.png"),
-												new ImageIcon("mine3.png"),new ImageIcon("flag3.png")}};
+		icons= new ImageIcon[][]{new ImageIcon[]{new ImageIcon("images/msEmpty.png"),new ImageIcon("images/ms1.png"),new ImageIcon("images/ms2.png"),new ImageIcon("images/ms3.png"),new ImageIcon("images/ms4.png"),
+												new ImageIcon("images/ms5.png"),new ImageIcon("images/ms6.png"),new ImageIcon("images/ms7.png"),new ImageIcon("images/ms8.png"),
+												new ImageIcon("images/mine.jpg"),new ImageIcon("images/flag.png")},
+											new ImageIcon[]{new ImageIcon("images/num0.png"),new ImageIcon("images/num1.png"),new ImageIcon("images/num2.png"),new ImageIcon("images/num3.png"),new ImageIcon("images/num4.png"),
+												new ImageIcon("images/num5.png"),new ImageIcon("images/num6.png"),new ImageIcon("images/num7.png"),new ImageIcon("images/num8.png"),
+												new ImageIcon("images/mine2.png"),new ImageIcon("images/flag2.png")},
+											new ImageIcon[]{new ImageIcon("images/box0.png"),new ImageIcon("images/box1.png"),new ImageIcon("images/box2.png"),new ImageIcon("images/images/box3.png"),new ImageIcon("images/box4.png"),
+												new ImageIcon("images/box5.png"),new ImageIcon("images/box6.png"),new ImageIcon("images/box7.png"),new ImageIcon("images/box8.png"),
+												new ImageIcon("images/mine3.png"),new ImageIcon("images/flag3.png")}};
 	}
 
 	public void setGrid() {
